@@ -1,5 +1,9 @@
 function makeArray(firstArray, secondArray, maxLength) {
-    let title = [];
+    const title = [firstArray, secondArray];
+    if (title.length > maxLength) {
+        return title.slice(0, maxLength);
+    }
+    return title;
 }
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
